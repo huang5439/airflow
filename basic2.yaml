@@ -1,0 +1,24 @@
+apiVersion: flink.apache.org/v1beta1
+kind: FlinkDeployment
+metadata:
+  name: integ-basic-test-2
+spec:
+  flinkVersion: v1_16
+  flinkConfiguration:
+    taskmanager.numberOfTaskSlots: 2
+  executionRoleArn: "arn:aws:iam::528755734373:role/EMRContainers-JobExecutionRole"
+  emrReleaseLabel: emr-6.13.0-flink-latest
+  jobManager:
+    highAvailabilityEnabled: false
+    replicas: 1
+    resource:
+      memory: "2048m"
+      cpu: 1
+  taskManager:
+    resource:
+      memory: "2048m"
+      cpu: 1
+  job:
+    jarURI: local:///opt/flink/examples/streaming/StateMachineExample.jar
+    parallelism: 2
+    upgradeMode: stateless

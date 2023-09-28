@@ -19,7 +19,6 @@ flink_operator = FlinkKubernetesOperator(
     namespace='flink-job',
     application_file='basic2.yaml',  # Path to your Flink job YAML file
     kubernetes_conn_id='your_k8s_conn_id',  # Connection ID to your Kubernetes cluster
-    startup_timeout_seconds=600,  # Adjust as needed
     do_xcom_push=True,
     dag=dag,
 )

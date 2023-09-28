@@ -5,7 +5,7 @@ from datetime import datetime
 # Define your DAG
 dag = DAG(
     'submit_flink_job',
-    start_date=datetime.datetime(2023, 9, 26),
+    start_date=datetime(2023, 9, 26),
     schedule_interval=None,  # You can set a schedule interval if needed
     catchup=False,
 )

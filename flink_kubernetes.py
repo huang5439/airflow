@@ -18,7 +18,6 @@ flink_operator = FlinkKubernetesOperator(
     task_id='submit_flink_job_task',
     namespace='flink-job',
     application_file='basic2.yaml',  # Path to your Flink job YAML file
-    kubernetes_conn_id='your_k8s_conn_id',  # Connection ID to your Kubernetes cluster
     do_xcom_push=True,
     dag=dag,
 )

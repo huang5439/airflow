@@ -5,10 +5,6 @@ from datetime import datetime
 # Define your DAG
 dag = DAG(
     'submit_flink_job',
-    default_args={
-        'owner': 'airflow',
-        'start_date': datetime(2023, 1, 1),  # Modify this to your desired start date
-    },
     schedule_interval=None,  # You can set a schedule interval if needed
     catchup=False,
 )

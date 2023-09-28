@@ -23,7 +23,7 @@ with DAG(
     tags=['k8s-pod-operator','example'],
 ) as dag:
     k = KubernetesPodOperator(
-        namespace='flink-job',
+        namespace='airflow-cluster',
         image="ubuntu:latest",
         cmds=["bash", "-cx"],
         arguments=["echo hello"],

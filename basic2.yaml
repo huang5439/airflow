@@ -3,7 +3,7 @@ kind: FlinkDeployment
 metadata:
   name: integ-basic-test-2
 spec:
-  flinkVersion: v1_16
+  flinkVersion: v1_17
   flinkConfiguration:
     taskmanager.numberOfTaskSlots: 2
   executionRoleArn: "arn:aws:iam::696683810026:role/FlinkOperatorRole-X86"

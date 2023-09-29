@@ -13,7 +13,7 @@ dag = DAG(
 # Define your Flink Kubernetes Operator
 flink_operator = FlinkKubernetesOperator(
     task_id='submit_flink_job_task',
-    namespace='airflow-cluster',
+    namespace='flink-job',
     application_file='basic2.yaml',  # Path to your Flink job YAML file
     do_xcom_push=True,
     dag=dag,

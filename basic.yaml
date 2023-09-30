@@ -1,7 +1,7 @@
 apiVersion: flink.apache.org/v1beta1
 kind: FlinkDeployment
 metadata:
-  name: integ-basic-test-2
+  name: integ-basic-test
 spec:
   flinkVersion: v1_17
   flinkConfiguration:
